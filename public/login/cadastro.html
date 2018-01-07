@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Gama Avanade Angular Assignment</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<style>
+
+  
+  body{
+    background: #200b66;
+    height: 100%;
+  }
+
+  .borda{
+    border: 1px solid #000;
+    margin-top: 15px;
+  }
+
+  .btn{
+    border-radius: 30px;
+    width: 80%;
+  }
+
+  .btn-padding{
+    padding: 7px;
+    width: 100%;
+  }
+
+  .legenda{
+    border-bottom: 2px solid #cecece;
+    font-size: 17px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .central{
+      display: flex;
+      align-items: center;
+      background: #3d60c8;
+      color: #fff;
+      border-radius: 10px 0px 0px 10px;
+  }
+
+  .altura{
+    height: 537px;
+    width: 600px;
+    border-radius: 10px;
+  }
+
+  p{
+    font-size: 13px;
+  }
+
+ .aviso{
+  color: #cecece;
+  font-size: 13px;
+ }
+
+ .fundo{
+  background: #fff;
+ }
+
+
+
+
+
+
+
+
+</style>
+
+<body>
+  <div class="col-3"></div>
+  <div id="main col-6">
+     <div class="container">
+          <div class="row altura borda">
+            <div class="col-4 central">
+              <div class="col text-center">
+                <p>Ja tem login?</p>
+                <button class="btn btn-success btn-padding">cadastre-se</button>
+              </div>
+            </div>
+
+
+
+            <div class="col-8 borda-1 fundo"> 
+                 <form>
+                  <div class="col"> 
+                     <legend class="legenda">Cadastre-se</legend>
+                     <label for="usuario">usauario</label>
+                     <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                        <input id="usuario" type="text" class="form-control" name="usauario" placeholder="Usuário">
+                     </div>  
+                  </div> </br>
+
+                  <div class="col">
+                    <label for="password">senha</label>
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-key" aria-hidden="true"></i></span>
+                      <input id="password" type="password" class="form-control" name="password" placeholder="Senha">
+                    </div>
+                    <span class="aviso">Nós nao compartilhamos seu email com terceiros</span>
+                  </div>  </br>
+
+                  <div class="col">
+                    <label for="email">Email</label>
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-key" aria-hidden="true"></i></span>
+                      <input id="email" type="email" class="form-control" name="email" placeholder="Email">
+                    </div>
+                  </div>   </br>
+
+
+                   <div class="col">
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                          <select class="form-control select-estilo" id="estado">
+                            <option>SP</option>
+                            <option>RJ</option>
+                            <option>MG<</option>
+                          </select>
+
+
+                        <select class="form-control" id="cidade">
+                          <option>Guarulhos</option>
+                          <option>Diadema</option>
+                          <option>Osasco</option>
+                        </select>
+                      </div> 
+                   </div> </br>
+   
+
+                   <div class="col text-center">
+                    <button type="button" class="btn btn-success" onclick="func1()">Entrar</button>
+                   </div> 
+                </form>
+            </div>
+          </div>  
+          </div>
+      </div>    
+  </div>
+  <div class="col-3"></div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  <script src="/js/index.js"></script>
+  <script type="text/javascript"> 
+
+    function func1(){
+
+      var url = "http://api.avanade.gama.academy/states";
+
+      $.ajax({
+          url: url,
+          type:'GET',
+          dataType: 'json',
+          success: function(json){
+            
+            },
+      });
+
+      };
+
+  </script>
+</body>
+
+</html>

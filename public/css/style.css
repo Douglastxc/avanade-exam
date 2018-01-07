@@ -1,0 +1,54 @@
+ 
+ .borda{
+    border: 1px solid #000;
+    margin-top: 15px;
+  }
+
+  body{
+    background: #200b66;
+  }
+
+  .btn{
+    border-radius: 30px;
+    width: 80%;
+  }
+
+  .btn-padding{
+    padding: 7px;
+    width: 100%;
+  }
+
+  .legenda{
+    border-bottom: 2px solid #cecece;
+    font-size: 17px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .central{
+      display: flex;
+      align-items: center;
+      background: #3d60c8;
+      color: #fff;
+      border-radius: 10px 0px 0px 10px;
+  }
+
+  .altura{
+    height: 310px;
+    width: 600px;
+    border-radius: 10px;
+  }
+
+  p{
+    font-size: 13px;
+  }
+
+ .aviso{
+  color: #cecece;
+  font-size: 13px;
+ }
+
+ .fundo{
+  background: #fff;
+ }
